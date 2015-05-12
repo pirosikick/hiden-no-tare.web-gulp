@@ -6,7 +6,7 @@ module.exports = {
     client: './client'
   },
   output: {
-    path: __dirname + "/.tmp",
+    path: __dirname + "/.tmp/scripts",
     filename: "[name].bundle.js"
   },
   module: {
