@@ -35,7 +35,8 @@ var webpackRunner = function (isProd) {
 var webpackCallback = function (done) {
   return function (err, stats) {
     if(err) throw new $.util.PluginError("webpack", err);
-    $.util.log("[webpack]", stats.toString({colors: true}));
+    $.util.log("[webpack]", stats.toString({ chunkModules: false, colors: true}));
+    browserSync.reload();
     done && done();
   }
 };
@@ -56,7 +57,7 @@ gulp.task('watch-webpack-config', function () {
   var configPath = require.resolve('./webpack.config');
 
   gulp.watch(['webpack.config.js']).on('change', function (event) {
-    if (event.type != 'devared' && require.cache[ configPath ]) {
+    if (event.type != 'deleted' && require.cache[ configPath ]) {
       delete require.cache[configPath];
       $.util.log("reload webpack.config.js");
     }
