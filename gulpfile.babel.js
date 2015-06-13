@@ -11,7 +11,8 @@ const env = process.env.NODE_ENV || '';
 const isProduction = env === 'production';
 
 const src = {
-  sass: 'public/styles/**/*.{scss,sass}'
+  sass: 'public/styles/**/*.{scss,sass}',
+  html: 'public/*.html'
 };
 
 const dest = {
@@ -54,14 +55,14 @@ gulp.task('main-bower-files', () => {
     .pipe(gulp.dest(dest.bower));
 });
 
-//gulp.task('html', ['main-bower-files', 'webpack', 'sass'], () => {
-//  return gulp.src(src.html)
-//    .pipe($.usemin({
-//      css: ['concat'],
-//      js: ['concat']
-//    }))
-//    .pipe(gulp.dest(dest.html))
-//});
+gulp.task('html', ['main-bower-files', 'webpack', 'sass'], () => {
+  return gulp.src(src.html)
+    .pipe($.usemin({
+      css: ['concat'],
+      js: ['concat']
+    }))
+    .pipe(gulp.dest('build/'))
+});
 
 gulp.task('serve', ['watch'], () => {
   browserSync({

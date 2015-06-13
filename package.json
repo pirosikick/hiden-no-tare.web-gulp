@@ -8,17 +8,23 @@
   "devDependencies": {
     "babel-core": "^5.5.7",
     "babel-loader": "^5.1.4",
+    "babel-runtime": "^5.5.7",
     "bower": "^1.4.1",
     "browser-sync": "^2.7.10",
     "gulp": "^3.9.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.1",
+    "gulp-usemin": "^0.3.11",
     "gulp-util": "^3.0.5",
     "main-bower-files": "^2.8.0",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.10"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "lodash": "^3.9.3"
+  },
   "scripts": {
     "start": "npm install && bower install && gulp"
   }
