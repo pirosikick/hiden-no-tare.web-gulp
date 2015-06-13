@@ -68,6 +68,12 @@ gulp.task('serve', ['watch'], () => {
     server: {
       baseDir: ['public', '.tmp']
     },
+    files: [
+      'public/*.html',
+      '.tmp/lib/**/*',
+      '.tmp/scripts/**/*.js',
+      '.tmp/styles/**/*.css'
+    ],
     port: port,
     ghostMode: false
   });
