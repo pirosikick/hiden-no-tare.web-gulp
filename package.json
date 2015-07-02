@@ -1,14 +1,14 @@
 {
   "name": "hiden-no-tare.web",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": {
     "type": "MIT",
     "url": "http://pirosikick.mit-license.org/"
   },
   "devDependencies": {
-    "babel-core": "^5.5.7",
-    "babel-loader": "^5.1.4",
-    "babel-runtime": "^5.5.7",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "babel-runtime": "^5.6.15",
     "bower": "^1.4.1",
     "browser-sync": "^2.7.10",
     "gulp": "^3.9.0",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "jquery": "^2.1.4",
-    "lodash": "^3.9.3"
+    "lodash": "^3.10.0"
   },
   "scripts": {
     "start": "npm install && bower install && gulp"
