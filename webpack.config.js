@@ -17,7 +17,7 @@ module.exports = {
   output: {
     path: path.join(
       __dirname,
-      isProduction ? '.tmp' : 'build',
+      isProduction ? 'build' : '.tmp',
       'scripts'
     ),
     filename: "[name].bundle.js"
